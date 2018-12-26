@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+set -ex
+
+read -r -d '' WEECHAT_CMDS << 'EOF' || true
+/aspell enable
+/script install autosort.py
+/server add anonops irc.anonops.com/6697
+/server add freenode irc.freenode.net/6697
+/server add mozilla irc.mozilla.org/6697
+/server add oftc irc.oftc.net/6697
+/set aspell.check.default_dict "en,hu"
+/set irc.ctcp.clientinfo ""
+/set irc.ctcp.finger ""
+/set irc.ctcp.ping ""
+/set irc.ctcp.source ""
+/set irc.ctcp.time ""
+/set irc.ctcp.userinfo ""
+/set irc.ctcp.version ""
+/set irc.look.server_buffer independent
+/set irc.look.temporary_servers on
+/set irc.server.anonops.ssl_fingerprint 30E5BA9DEF5315A3404DB764C5381D616468072E3C2095EED0ECB22513F493E5,CE266B06AA9C1B39F64193E0929DCE8BA281458B083FC15DEEE3F257D5A62BEA
+/set irc.server_default.anti_flood_prio_high 0
+/set irc.server_default.anti_flood_prio_low 0
+/set irc.server_default.msg_kick ""
+/set irc.server_default.msg_part ""
+/set irc.server_default.msg_quit ""
+/set irc.server_default.nicks "unknown"
+/set irc.server_default.nicks_alternate off
+/set irc.server_default.realname "UNKNOWN"
+/set irc.server_default.ssl on
+/set irc.server_default.username "unknown"
+/wait 5s /exit
+EOF
+weechat-headless --dir /etc/skel/.weechat --run-command "${WEECHAT_CMDS}"

@@ -1,0 +1,14 @@
+aspell
+aspell-en
+aspell-hu
+debconf-utils
+dnsutils
+iproute2
+keyboard-configuration
+live-tools
+locales
+locales-all
+man
+sudo
+tor
+user-setup

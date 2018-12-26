@@ -1,0 +1,15 @@
+[submodule "config/includes.chroot/etc/skel/config/includes.chroot/etc/skel/.oh-my-zsh"]
+	path = config/includes.chroot/etc/skel/config/includes.chroot/etc/skel/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "config/includes.chroot/etc/skel/.vim/pack/plugins/start/rust.vim"]
+	path = config/includes.chroot/etc/skel/.vim/pack/plugins/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule "config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-airline"]
+	path = config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "config/includes.chroot/etc/skel/.vim/pack/plugins/start/nerdtree"]
+	path = config/includes.chroot/etc/skel/.vim/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "config/includes.chroot/etc/skel/.oh-my-zsh"]
+	path = config/includes.chroot/etc/skel/.oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -ex
+
+echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
+dpkg-reconfigure wireshark-common -f noninteractive

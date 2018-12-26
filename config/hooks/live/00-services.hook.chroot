@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+systemctl disable docker
+systemctl disable containerd
+systemctl disable tor

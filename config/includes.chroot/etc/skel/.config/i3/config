@@ -1,0 +1,119 @@
+# terminal
+set $terminal urxvt
+
+# font
+font pango: Hack 10
+
+# color
+set $bg-color            #000000
+set $inactive-bg-color   #000000
+set $text-color          #f3f4f5
+set $inactive-text-color #676e7d
+set $urgent-bg-color     #e53935
+set $separator           #757575
+set $indicator           #00ff00
+
+# workspace
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
+set $workspace5 "5"
+set $workspace6 "6"
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
+
+# border
+hide_edge_borders both
+new_window none
+
+# mod key
+set $mod Mod4
+floating_modifier $mod
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# window management
+bindsym $mod+d exec dmenu_run
+bindsym $mod+Return exec $terminal -e /usr/bin/zsh
+
+bindsym $mod+Shift+q kill
+bindsym $mod+f fullscreen
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+    bindsym Left resize shrink width 10 px or 10 ppt
+    bindsym Down resize grow height 10 px or 10 ppt
+    bindsym Up resize shrink height 10 px or 10 ppt
+    bindsym Right resize grow width 10 px or 10 ppt
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# workspace management
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+
+bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
+
+# window color
+client.focused          $bg-color          $bg-color          $text-color          $indicator
+client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator
+client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color $indicator
+client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color          $indicator
+
+# status bar
+bar {
+    status_command i3blocks -c ~/.config/i3/i3blocks.conf
+    position top
+    tray_output primary
+    colors {
+        background $bg-color
+        separator $separator
+        focused_workspace  $bg-color          $bg-color          $text-color
+        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+    }
+}
+
+# lock screen
+bindsym $mod+x exec i3lock --color 000000 --show-failed-attempts
+
+# screenshot
+bindsym Print exec scrot
+
+# background
+exec xsetroot -solid "#000000"
+
+# keyboard
+exec xset r rate 250 60

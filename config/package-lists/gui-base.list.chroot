@@ -1,0 +1,12 @@
+fonts-hack-ttf
+i3
+i3blocks
+i3lock
+lightdm
+rxvt-unicode-256color
+scrot
+suckless-tools
+x11-xserver-utils
+xinit
+xserver-xorg
+xserver-xorg-core

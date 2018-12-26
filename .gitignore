@@ -1,0 +1,12 @@
+.build/
+.lock
+chroot/
+config/binary
+config/bootstrap
+config/build
+config/chroot
+config/common
+config/hooks/live/0010-disable-kexec-tools.hook.chroot
+config/hooks/live/0050-disable-sysvinit-tmpfs.hook.chroot
+config/hooks/normal/
+config/source
