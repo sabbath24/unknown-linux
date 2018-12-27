@@ -33,3 +33,5 @@ read -r -d '' WEECHAT_CMDS << 'EOF' || true
 /wait 5s /exit
 EOF
 weechat-headless --dir /etc/skel/.weechat --run-command "${WEECHAT_CMDS}"
+
+apt-get remove --yes weechat-headless
