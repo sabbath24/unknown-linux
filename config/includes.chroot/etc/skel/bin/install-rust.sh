@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -x
+set -ex
 
 curl https://sh.rustup.rs -sSf | sh -s -- --default-toolchain nightly -y
 rustup component add rust-src
