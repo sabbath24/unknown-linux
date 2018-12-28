@@ -14,7 +14,7 @@ lb config \
     --architectures "amd64" \
     --archive-areas "main contrib non-free" \
     --binary-images "iso-hybrid" \
-    --bootappend-live "boot=live components splash nottyautologin" \
+    --bootappend-live "boot=live components splash nottyautologin nonetworking" \
     --bootloaders "grub-efi" \
     --cache "false" \
     --checksums "sha512" \
