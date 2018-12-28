@@ -1,5 +1,4 @@
 export EDITOR='vim'
-export PATH=${HOME}/.cargo/bin:${HOME}/bin:/usr/local/bin:${PATH}
 export ZSH=~/.oh-my-zsh
 ZSH_THEME="imajes"
 plugins=(
