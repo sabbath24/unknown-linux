@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+cd /etc/skel/
+curl -LsSf "https://www.torproject.org/dist/torbrowser/8.0.4/tor-browser-linux64-8.0.4_en-US.tar.xz" | tar -xvJ
+mv tor-browser_en-US .tor-browser
