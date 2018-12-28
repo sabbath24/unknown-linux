@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+CURR_USERNAME=$(whoami)
+
+sudo ip netns exec clearnet su - "${CURR_USERNAME}" -c "/home/${CURR_USERNAME}/.tor-browser/Browser/start-tor-browser --detach"
