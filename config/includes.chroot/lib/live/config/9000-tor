@@ -12,7 +12,10 @@ nameserver 10.0.0.2
 EOF
 
 cat << EOF > /etc/tor/torrc
+DataDirectory /var/lib/tor
 RunAsDaemon 1
+User debian-tor
+
 VirtualAddrNetwork 10.192.0.0/10
 AutomapHostsOnResolve 1
 TransPort 10.0.0.2:9040
