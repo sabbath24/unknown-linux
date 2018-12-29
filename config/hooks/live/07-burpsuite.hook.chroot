@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -ex
+
+curl "https://portswigger.net/burp/releases/download?product=community&version=1.7.36&type=jar" > /opt/burpsuite.jar
+ln -s /opt/burpsuite.jar /usr/local/bin/burpsuite

@@ -2,6 +2,7 @@ aspell
 aspell-en
 aspell-hu
 debconf-utils
+default-jre
 dnsutils
 iproute2
 keyboard-configuration
