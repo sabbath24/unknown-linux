@@ -1,3 +1,5 @@
+URxvt.termName: rxvt-256color
+
 ! font
 URxvt.font:           xft:Hack:pixelsize=15:antialias=true
 URxvt.boldFont:       xft:Hack:pixelsize=15:bold:antialias=true
