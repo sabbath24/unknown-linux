@@ -3,6 +3,7 @@ ffmpeg
 gdb
 git
 htop
+netcat
 nmap
 openssh-client
 qemu
@@ -10,6 +11,7 @@ ranger
 rtorrent
 sqlmap
 tcpdump
+telnet
 tmux
 tshark
 vim
