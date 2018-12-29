@@ -1,6 +1,7 @@
 ack-grep
 curl
 ffmpeg
+forensics-extra
 gdb
 git
 htop
