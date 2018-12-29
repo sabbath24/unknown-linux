@@ -11,6 +11,7 @@ openssh-client
 qemu
 ranger
 rtorrent
+screen
 sqlmap
 tcpdump
 telnet
