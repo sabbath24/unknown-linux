@@ -3,4 +3,6 @@
 set -ex
 
 curl "https://portswigger.net/burp/releases/download?product=community&version=1.7.36&type=jar" > /opt/burpsuite.jar
-ln -s /opt/burpsuite.jar /usr/local/bin/burpsuite
+echo "java -jar /opt/burpsuite.jar" > /opt/burpsuite.sh
+chmod +x /opt/burpsuite.sh
+ln -s /opt/burpsuite.sh /usr/local/bin/burpsuite
