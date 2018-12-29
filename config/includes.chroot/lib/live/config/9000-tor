@@ -22,7 +22,7 @@ ControlPort 127.0.0.1:9051
 EOF
 
 ip netns add clearnet
-for IFACE in $(ls -1 /sys/class/net | grep ^e); do
+for IFACE in $(ls -1 /sys/class/net | grep '^[ew]'); do
     ip link set dev "${IFACE}" netns clearnet
     ip netns exec clearnet macchanger -A "${IFACE}"
 done
