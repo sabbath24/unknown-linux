@@ -1,7 +1,7 @@
-Package: weechat*
+Package: tor weechat*
 Pin: release a=stretch-backports
 Pin-Priority: 900
 
-Package: weechat*
+Package: tor weechat*
 Pin: release a=stable
 Pin-Priority: 800
