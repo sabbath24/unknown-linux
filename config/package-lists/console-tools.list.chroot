@@ -5,6 +5,7 @@ git
 htop
 nmap
 openssh-client
+qemu
 ranger
 sqlmap
 tcpdump
