@@ -7,6 +7,7 @@ read -r -d '' WEECHAT_CMDS << 'EOF' || true
 /script install autosort.py
 /server add anonops irc.anonops.com/6697
 /server add freenode irc.freenode.net/6697
+/server add hackint ncwkrwxpq2ikcngxq3dy2xctuheniggtqeibvgofixpzvrwpa77tozqd.onion/6667
 /server add mozilla irc.mozilla.org/6697
 /server add oftc irc.oftc.net/6697
 /set aspell.check.default_dict "en,hu"
@@ -20,6 +21,7 @@ read -r -d '' WEECHAT_CMDS << 'EOF' || true
 /set irc.look.server_buffer independent
 /set irc.look.temporary_servers on
 /set irc.server.anonops.ssl_fingerprint 30E5BA9DEF5315A3404DB764C5381D616468072E3C2095EED0ECB22513F493E5,CE266B06AA9C1B39F64193E0929DCE8BA281458B083FC15DEEE3F257D5A62BEA
+/set irc.server.hackint.ssl off
 /set irc.server_default.anti_flood_prio_high 0
 /set irc.server_default.anti_flood_prio_low 0
 /set irc.server_default.msg_kick ""
