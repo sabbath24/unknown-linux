@@ -9,7 +9,7 @@ services:
 
 script:
   - while sleep 9m; do echo '[!] Keepalive Travis CI pipeline'; done &
-  - docker run --privileged --rm --volume "${PWD}:/build/" --workdir "/build/" --entrypoint "/build/build.sh" debian:stretch
+  - docker run --privileged --rm --volume "${PWD}:/build/" --workdir "/build/" --entrypoint "/build/build.sh" debian:stable
   - kill %1
   - mv unknown-linux-live-amd64.hybrid.iso unknown-linux-live-amd64.iso
 

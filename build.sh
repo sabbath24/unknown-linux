@@ -19,7 +19,7 @@ lb config \
     --cache "false" \
     --checksums "sha512" \
     --debian-installer "false" \
-    --debootstrap-options "--include=apt-transport-https,software-properties-common" \
+    --debootstrap-options "--include=apt-transport-https,software-properties-common,gnupg" \
     --distribution "${CFG_DIST_CODE}" \
     --grub-splash "${CFG_DIST_CODE}" \
     --ignore-system-defaults \
@@ -35,7 +35,7 @@ lb config \
     --mirror-bootstrap "${CFG_MIRROR}" \
     --mirror-chroot-security "${CFG_MIRROR_SECURITY}" \
     --parent-archive-areas "main contrib non-free" \
-    --parent-distribution "stretch" \
+    --parent-distribution "testing" \
     --parent-mirror-binary "${CFG_MIRROR}" \
     --parent-mirror-binary-security "${CFG_MIRROR_SECURITY}" \
     --parent-mirror-bootstrap "${CFG_MIRROR}" \
