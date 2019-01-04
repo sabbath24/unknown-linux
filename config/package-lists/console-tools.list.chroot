@@ -24,4 +24,5 @@ weechat
 weechat-headless
 weechat-python
 weechat-scripts
+wget
 zsh
