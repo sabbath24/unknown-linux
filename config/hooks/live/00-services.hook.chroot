@@ -5,4 +5,5 @@ set -ex
 systemctl disable clamav-freshclam.service
 systemctl disable containerd
 systemctl disable docker
+systemctl disable systemd-timesyncd
 systemctl disable tor

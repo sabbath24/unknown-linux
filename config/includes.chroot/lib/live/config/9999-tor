@@ -46,4 +46,7 @@ ip netns exec clearnet iptables -t nat -A PREROUTING -i tor0 -p tcp --syn -j RED
 sysctl -w net.ipv4.conf.all.forwarding=1
 
 ip netns exec clearnet dhclient
+ip netns exec clearnet timeout 5s /lib/systemd/systemd-timesyncd
 ip netns exec clearnet tor
+systemctl enable systemd-timesyncd
+systemctl start systemd-timesyncd
