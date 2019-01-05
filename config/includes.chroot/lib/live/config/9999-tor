@@ -7,10 +7,6 @@ supersede domain-name-servers 10.0.0.2;
 supersede domain-name " ";
 EOF
 
-cat << EOF > /etc/resolv.conf
-nameserver 10.0.0.2
-EOF
-
 cat << EOF > /etc/tor/torrc
 DataDirectory /var/lib/tor
 RunAsDaemon 1
@@ -25,8 +21,15 @@ ControlPort 127.0.0.1:9051
 EOF
 
 ip netns add clearnet
-for IFACE in $(ls -1 /sys/class/net | grep '^[ew]'); do
+for IFACE in $(ls -1 /sys/class/net | grep '^e'); do
     ip link set dev "${IFACE}" netns clearnet
+    ip netns exec clearnet macchanger -A "${IFACE}"
+done
+for IFACE in $(iw list | grep Wiphy | cut -d" " -f2); do
+    iw phy "${IFACE}" set netns name clearnet
+done
+for IFACE in $(ip netns exec clearnet ls -1 /sys/class/net | grep '^w'); do
+    ip netns exec clearnet ip link set "${IFACE}" down
     ip netns exec clearnet macchanger -A "${IFACE}"
 done
 
@@ -46,7 +49,12 @@ ip netns exec clearnet iptables -t nat -A PREROUTING -i tor0 -p tcp --syn -j RED
 sysctl -w net.ipv4.conf.all.forwarding=1
 
 ip netns exec clearnet dhclient
-ip netns exec clearnet timeout 5s /lib/systemd/systemd-timesyncd
+cat << EOF > /etc/resolv.conf
+nameserver 1.1.1.1
+EOF
+ip netns exec clearnet timeout 5s /lib/systemd/systemd-timesyncd || true
+cat << EOF > /etc/resolv.conf
+nameserver 10.0.0.2
+EOF
 ip netns exec clearnet tor
-systemctl enable systemd-timesyncd
-systemctl start systemd-timesyncd
+ip netns exec clearnet /lib/systemd/systemd-timesyncd &
