@@ -18,6 +18,7 @@ sqlmap
 tcpdump
 telnet
 tmux
+traceroute
 tshark
 vim
 weechat
