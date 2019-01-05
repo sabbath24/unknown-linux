@@ -4,4 +4,4 @@ set -ex
 
 CURR_USERNAME=$(whoami)
 
-sudo ip netns exec clearnet su - "${CURR_USERNAME}" -c "/home/${CURR_USERNAME}/.tor-browser/Browser/start-tor-browser --detach"
+sudo ip netns exec clearnet sudo -u "${CURR_USERNAME}" /home/${CURR_USERNAME}/.tor-browser/Browser/start-tor-browser --detach
