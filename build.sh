@@ -7,8 +7,28 @@ CFG_MIRROR="http://deb.debian.org/debian"
 CFG_MIRROR_SECURITY="http://security.debian.org"
 
 apt-get update && apt-get install --no-install-recommends --yes \
+    ca-certificates \
     cpio \
-    live-build \
+    curl \
+    live-build
+
+# vegam firmware
+mkdir -p config/includes.chroot/lib/firmware/amdgpu
+while read FILE; do
+    curl -o config/includes.chroot/lib/firmware/amdgpu/${FILE} https://people.freedesktop.org/~agd5f/radeon_ucode/vegam/${FILE}
+done << EOF
+vegam_ce.bin
+vegam_me.bin
+vegam_mec.bin
+vegam_mec2.bin
+vegam_pfp.bin
+vegam_rlc.bin
+vegam_sdma.bin
+vegam_sdma1.bin
+vegam_smc.bin
+vegam_uvd.bin
+vegam_vce.bin
+EOF
 
 lb config \
     --architectures "amd64" \
