@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -ex
+
+FILENAME="vagrant_2.2.3_x86_64.deb"
+
+curl -Lo "${FILENAME}" "https://releases.hashicorp.com/vagrant/2.2.3/${FILENAME}" \
+    && dpkg -i "${FILENAME}" \
+    && rm "${FILENAME}"
