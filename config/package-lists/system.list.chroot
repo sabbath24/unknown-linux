@@ -4,6 +4,7 @@ aspell-hu
 debconf-utils
 default-jre
 dnsutils
+docker-ce
 iproute2
 keyboard-configuration
 live-tools
