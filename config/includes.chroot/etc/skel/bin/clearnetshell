@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo ip netns exec clearnet su - "$(whoami)"
