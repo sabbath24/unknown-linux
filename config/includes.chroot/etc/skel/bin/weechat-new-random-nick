@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+NICK=$(cat /dev/urandom | tr -dc 'a-z' | fold -w 6 | head -n 1)
+
+read -r -d '' WEECHAT_CMDS << EOF || true
+/set irc.server_default.nicks "${NICK}"
+/set irc.server_default.realname "${NICK}"
+/set irc.server_default.username "${NICK}"
+/exit
+EOF
+weechat --run-command "${WEECHAT_CMDS}"
