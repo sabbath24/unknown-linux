@@ -12,6 +12,8 @@ locales
 locales-all
 macchanger
 man
+qemu
 sudo
 tor
 user-setup
+virtualbox
