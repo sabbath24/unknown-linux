@@ -10,7 +10,6 @@ kubectl
 netcat
 nmap
 openssh-client
-qemu
 radare2
 ranger
 rtorrent
