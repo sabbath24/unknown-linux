@@ -2,6 +2,11 @@
 
 set -ex
 
+if [ -z "${NONETWORKING}" ]
+then
+    return
+fi
+
 cat << EOF > /etc/dhcp/dhclient.conf
 supersede domain-name-servers 10.0.0.2;
 supersede domain-name " ";
