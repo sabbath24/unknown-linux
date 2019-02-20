@@ -6,6 +6,7 @@ default-jre
 dnsutils
 docker-ce
 iproute2
+iw
 keyboard-configuration
 live-tools
 locales
