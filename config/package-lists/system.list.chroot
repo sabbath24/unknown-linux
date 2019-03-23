@@ -5,6 +5,7 @@ debconf-utils
 default-jre
 dnsutils
 docker-ce
+firmware-linux
 iproute2
 iw
 keyboard-configuration
