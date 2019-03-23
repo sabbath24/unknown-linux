@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -ex
+
+FILENAME="Alacritty-v0.2.9_amd64.deb"
+
+curl -Lo "${FILENAME}" "https://github.com/jwilm/alacritty/releases/download/v0.2.9/${FILENAME}" \
+    && dpkg -i "${FILENAME}" \
+    && rm "${FILENAME}"
