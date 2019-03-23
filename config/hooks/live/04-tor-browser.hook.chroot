@@ -3,5 +3,5 @@
 set -ex
 
 cd /etc/skel/
-curl -LsSf "https://www.torproject.org/dist/torbrowser/8.0.5/tor-browser-linux64-8.0.5_en-US.tar.xz" | tar -xvJ
+curl -LsSf "https://www.torproject.org/dist/torbrowser/8.0.8/tor-browser-linux64-8.0.8_en-US.tar.xz" | tar -xvJ
 mv tor-browser_en-US .tor-browser
