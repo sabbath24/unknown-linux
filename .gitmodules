@@ -13,3 +13,12 @@
 [submodule "config/includes.chroot/etc/skel/.oh-my-zsh"]
 	path = config/includes.chroot/etc/skel/.oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-multiple-cursors"]
+	path = config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-multiple-cursors
+	url = https://github.com/terryma/vim-multiple-cursors
+[submodule "config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-fugitive"]
+	path = config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-gitgutter"]
+	path = config/includes.chroot/etc/skel/.vim/pack/plugins/start/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
