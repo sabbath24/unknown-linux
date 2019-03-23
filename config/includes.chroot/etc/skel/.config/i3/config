@@ -1,8 +1,8 @@
 # terminal
-set $terminal urxvt
+set $terminal alacritty
 
 # font
-font pango: Hack 10
+font pango: FiraCode 10
 
 # color
 set $bg-color            #000000
