@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -ex
+
+sudo ip netns exec clearnet bash -c '{ echo "AUTHENTICATE"; echo "SIGNAL NEWNYM"; sleep 1; } | telnet 127.0.0.1 9051'
